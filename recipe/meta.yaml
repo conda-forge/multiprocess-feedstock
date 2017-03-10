@@ -1,13 +1,14 @@
-{% set version = "0.70.4" %}
+{% set name = "multiprocess" %}
+{% set version = "0.70.5" %}
 
 package:
-  name: multiprocess
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: multiprocess-0.70.4.tgz
-  url: https://pypi.python.org/packages/source/m/multiprocess/multiprocess-0.70.4.tgz
-  md5: 587596fff965e66a4f474a283a72f180 
+  fn: {{ name }}-{{ version }}.zip
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  md5: bfe394368b1d98192f1f62cc0060be20 
 
 build:
   number: 0

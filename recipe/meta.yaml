@@ -1,21 +1,22 @@
 {% set name = "multiprocess" %}
-{% set version = "0.70.5" %}
+{% set version = "0.70.6.1" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.zip
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  md5: bfe394368b1d98192f1f62cc0060be20 
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 985d2faa28def907e303b4222b01281d2dcd3baa0fe53a4a0178ac63be62e5c6
 
 build:
   number: 1000
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools >=0.6
     - dill >=0.2.5
@@ -31,7 +32,7 @@ test:
 
 about:
   home: http://trac.mystic.cacr.caltech.edu/project/pathos/wiki.html
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: COPYING.txt
   summary: better multiprocessing and multithreading in python
 

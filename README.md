@@ -3,7 +3,7 @@ About multiprocess
 
 Home: http://trac.mystic.cacr.caltech.edu/project/pathos/wiki.html
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 

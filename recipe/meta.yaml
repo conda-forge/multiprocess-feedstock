@@ -11,7 +11,7 @@ source:
   sha256: 985d2faa28def907e303b4222b01281d2dcd3baa0fe53a4a0178ac63be62e5c6
 
 build:
-  number: 1000
+  number: 1001
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - python
     - setuptools >=0.6
     - dill >=0.2.5
+    - {{ compiler('c') }}
 
   run:
     - python
@@ -27,6 +28,7 @@ requirements:
 
 test:
   imports:
+    - _multiprocess
     - multiprocess
     - multiprocess.dummy
 

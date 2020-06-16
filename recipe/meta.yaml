@@ -28,7 +28,6 @@ requirements:
 
 test:
   imports:
-    - _multiprocess
     - multiprocess
     - multiprocess.dummy
 

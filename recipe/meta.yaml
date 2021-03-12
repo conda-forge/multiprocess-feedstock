@@ -34,7 +34,7 @@ test:
     - multiprocess.dummy
 
 about:
-  home: http://trac.mystic.cacr.caltech.edu/project/pathos/wiki.html
+  home: https://pypi.org/project/multiprocess/
   license: BSD-3-Clause
   license_file: COPYING.txt
   summary: better multiprocessing and multithreading in python

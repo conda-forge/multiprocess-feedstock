@@ -1,7 +1,7 @@
 About multiprocess
 ==================
 
-Home: http://trac.mystic.cacr.caltech.edu/project/pathos/wiki.html
+Home: https://pypi.org/project/multiprocess/
 
 Package license: BSD-3-Clause
 
@@ -351,7 +351,4 @@ Feedstock Maintainers
 =====================
 
 * [@jschueller](https://github.com/jschueller/)
-
-
-<!-- dummy commit to enable rerendering -->
 

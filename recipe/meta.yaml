@@ -1,5 +1,5 @@
 {% set name = "multiprocess" %}
-{% set version = "0.70.11.1" %}
+{% set version = "0.70.12.1" %}
 
 package:
   name: {{ name }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 9d5e417f3ebce4d027a3c900995840f167f316d9f73c0a7a1fbb4ac0116298d0
+  sha256: d73afab98823e06423f68271cce77743fd82ce587090bf5a6ce408396d9a68f3
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:

@@ -1,13 +1,11 @@
-{% set name = "multiprocess" %}
 {% set version = "0.70.12.2" %}
 
 package:
-  name: {{ name }}
+  name: multiprocess
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  url: https://pypi.io/packages/source/m/multiprocess/multiprocess-{{ version }}.zip
   sha256: 206bb9b97b73f87fec1ed15a19f8762950256aa84225450abc7150d02855a083
 
 build:
@@ -22,7 +20,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools >=0.6
+    - setuptools
     - dill >=0.2.5
   run:
     - python

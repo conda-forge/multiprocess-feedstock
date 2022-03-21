@@ -38,6 +38,7 @@ about:
   license: BSD-3-Clause
   license_file: COPYING.txt
   summary: better multiprocessing and multithreading in python
+  dev_url: https://github.com/uqfoundation/multiprocess
 
 extra:
   recipe-maintainers:

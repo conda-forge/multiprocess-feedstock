@@ -34,7 +34,7 @@ test:
 about:
   home: https://pypi.org/project/multiprocess/
   license: BSD-3-Clause
-  license_file: COPYING.txt
+  license_file: COPYING
   summary: better multiprocessing and multithreading in python
   dev_url: https://github.com/uqfoundation/multiprocess
 

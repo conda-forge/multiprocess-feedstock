@@ -21,10 +21,10 @@ requirements:
     - pip
     - python
     - setuptools
-    - dill >=0.2.5
+    - dill >=0.3.5.1
   run:
     - python
-    - dill >=0.2.5
+    - dill >=0.3.5.1
 
 test:
   imports:

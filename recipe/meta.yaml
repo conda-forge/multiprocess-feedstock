@@ -9,7 +9,7 @@ source:
   sha256: 3eddafc12f2260d27ae03fe6069b12570ab4764ab59a75e81624fac453fbf46a
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
@@ -21,15 +21,19 @@ requirements:
     - pip
     - python
     - setuptools
-    - dill >=0.3.5.1
+    - dill >=0.3.6
   run:
     - python
-    - dill >=0.3.5.1
+    - dill >=0.3.6
 
 test:
+  requires:
+    - pip
   imports:
     - multiprocess
     - multiprocess.dummy
+  commands:
+    - pip check
 
 about:
   home: https://pypi.org/project/multiprocess/

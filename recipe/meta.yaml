@@ -1,4 +1,4 @@
-{% set version = "0.70.15" %}
+{% set version = "0.70.16" %}
 
 package:
   name: multiprocess
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/multiprocess/multiprocess-{{ version }}.tar.gz
-  sha256: f20eed3036c0ef477b07a4177cf7c1ba520d9a2677870a4f47fe026f0cd6787e
+  sha256: 161af703d4652a0e1410be6abccecde4a7ddffd19341be0a7011b94aeb171ac1
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
@@ -21,10 +21,10 @@ requirements:
     - pip
     - python
     - setuptools
-    - dill >=0.3.6
+    - dill >=0.3.8
   run:
     - python
-    - dill >=0.3.6
+    - dill >=0.3.8
 
 test:
   requires:

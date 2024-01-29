@@ -19,12 +19,12 @@ requirements:
     - {{ compiler('c') }}
   host:
     - pip
-    - python
+    - python >=3.8
     - setuptools
-    - dill >=0.3.6
+    - dill >=0.3.8
   run:
-    - python
-    - dill >=0.3.6
+    - python >=3.8
+    - dill >=0.3.8
 
 test:
   requires:

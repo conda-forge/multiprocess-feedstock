@@ -34,7 +34,8 @@ test:
     - multiprocess
     - multiprocess.dummy
   commands:
-    - pip check
+    # pip check is currently broken due to bad upstream metadata
+    # - pip check
 
 about:
   home: https://pypi.org/project/multiprocess/

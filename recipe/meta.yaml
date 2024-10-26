@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - pip
+    - pip <24.2
     - python
     - setuptools
     - dill >=0.3.8
@@ -46,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - jschueller
+    - synapticarbors

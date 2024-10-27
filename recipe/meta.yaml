@@ -1,4 +1,4 @@
-{% set version = "0.70.16" %}
+{% set version = "0.70.17" %}
 
 package:
   name: multiprocess
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/multiprocess/multiprocess-{{ version }}.tar.gz
-  sha256: 161af703d4652a0e1410be6abccecde4a7ddffd19341be0a7011b94aeb171ac1
+  sha256: 4ae2f11a3416809ebc9a48abfc8b14ecce0652a0944731a1493a3c1ba44ff57a
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - pip
+    - pip <24.2
     - python
     - setuptools
     - dill >=0.3.8
@@ -34,7 +34,8 @@ test:
     - multiprocess
     - multiprocess.dummy
   commands:
-    - pip check
+    # pip check is currently broken due to bad upstream metadata
+    # - pip check
 
 about:
   home: https://pypi.org/project/multiprocess/
@@ -46,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - jschueller
+    - synapticarbors

@@ -368,4 +368,5 @@ Feedstock Maintainers
 =====================
 
 * [@jschueller](https://github.com/jschueller/)
+* [@synapticarbors](https://github.com/synapticarbors/)
 

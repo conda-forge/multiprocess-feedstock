@@ -8,6 +8,7 @@ source:
   url: https://pypi.io/packages/source/m/multiprocess/multiprocess-{{ version }}.tar.gz
   sha256: 4ae2f11a3416809ebc9a48abfc8b14ecce0652a0944731a1493a3c1ba44ff57a
   patch:
+    # https://github.com/uqfoundation/multiprocess/pull/197
     - 197_fix_pip_check.patch
 
 build:

@@ -14,7 +14,14 @@ source:
 build:
   skip: True  # [py<38]
   number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script:
+    # Temp fix:
+    # Upstream included the wrong tag in the setup.cfg
+    # during the source upload. This deletes it to allow it to be regenerated
+    # https://github.com/uqfoundation/multiprocess/pull/197
+    - rm setup.cfg    # [unix]
+    - del setup.cfg   # [win]
+    - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   build:

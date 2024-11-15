@@ -7,6 +7,9 @@ package:
 source:
   url: https://pypi.org/packages/source/m/multiprocess/multiprocess-{{ version }}.tar.gz
   sha256: 4ae2f11a3416809ebc9a48abfc8b14ecce0652a0944731a1493a3c1ba44ff57a
+  patches:
+    - 0001-add-packaging.patch
+    - 0002-unpin-py313.patch
 
 build:
   skip: True  # [py<38]
@@ -24,6 +27,7 @@ requirements:
     - python
     - setuptools >=42
     - dill >=0.3.9
+    - packaging
   run:
     - python
     - dill >=0.3.9

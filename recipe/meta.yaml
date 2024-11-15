@@ -39,11 +39,11 @@ test:
     - pip check
 
 about:
-  home: https://pypi.org/project/multiprocess/
+  home: https://github.com/uqfoundation/multiprocess
   license: BSD-3-Clause
   license_file: COPYING
   summary: better multiprocessing and multithreading in python
-  dev_url: https://github.com/uqfoundation/multiprocess
+  doc_url: https://multiprocess.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:

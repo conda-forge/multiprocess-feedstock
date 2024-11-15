@@ -5,11 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/m/multiprocess/multiprocess-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/m/multiprocess/multiprocess-{{ version }}.tar.gz
   sha256: 4ae2f11a3416809ebc9a48abfc8b14ecce0652a0944731a1493a3c1ba44ff57a
 
 build:
-  number: 0
+  skip: True  # [py<38]
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
@@ -17,15 +18,15 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
   host:
-    - pip <24.2
+    - pip
     - python
-    - setuptools
-    - dill >=0.3.8
+    - setuptools >=42
+    - dill >=0.3.9
   run:
     - python
-    - dill >=0.3.8
+    - dill >=0.3.9
 
 test:
   requires:
@@ -35,7 +36,7 @@ test:
     - multiprocess.dummy
   commands:
     # pip check is currently broken due to bad upstream metadata
-    # - pip check
+    - pip check
 
 about:
   home: https://pypi.org/project/multiprocess/
@@ -48,3 +49,4 @@ extra:
   recipe-maintainers:
     - jschueller
     - synapticarbors
+    - thewchan

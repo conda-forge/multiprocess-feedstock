@@ -3,13 +3,13 @@ About multiprocess-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/multiprocess-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pypi.org/project/multiprocess/
+Home: https://github.com/uqfoundation/multiprocess
 
 Package license: BSD-3-Clause
 
 Summary: better multiprocessing and multithreading in python
 
-Development: https://github.com/uqfoundation/multiprocess
+Documentation: https://multiprocess.readthedocs.io/en/latest/
 
 Current build status
 ====================
@@ -369,4 +369,5 @@ Feedstock Maintainers
 
 * [@jschueller](https://github.com/jschueller/)
 * [@synapticarbors](https://github.com/synapticarbors/)
+* [@thewchan](https://github.com/thewchan/)
 

@@ -15,8 +15,7 @@ source:
     - 0002-unpin-py313.patch
 
 build:
-  number: 1
-  skip: match(python, "<3.8")
+  number: 2
   script:
     # Temp fix:
     # Upstream included the wrong tag in the setup.cfg

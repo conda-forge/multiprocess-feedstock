@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.70.18
+  version: 0.70.16
 
 package:
   name: multiprocess
@@ -9,14 +9,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/multiprocess/multiprocess-${{ version }}.tar.gz
-  sha256: f9597128e6b3e67b23956da07cf3d2e5cba79e2f4e0fba8d7903636663ec6d0d
+  sha256: 161af703d4652a0e1410be6abccecde4a7ddffd19341be0a7011b94aeb171ac1
   patches:
     - 0001-add-packaging.patch
     - 0002-unpin-py313.patch
 
 build:
-  number: 1
-  skip: match(python, "<3.8")
+  number: 2
   script:
     # Temp fix:
     # Upstream included the wrong tag in the setup.cfg
@@ -31,9 +30,9 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
-      - python
-      - cross-python_${{ target_platform }}
+      then:
+        - python
+        - cross-python_${{ target_platform }}
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
   host:

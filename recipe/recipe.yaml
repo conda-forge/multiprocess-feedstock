@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.70.18
+  version: "0.70.19"
 
 package:
   name: multiprocess
@@ -9,13 +9,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/multiprocess/multiprocess-${{ version }}.tar.gz
-  sha256: f9597128e6b3e67b23956da07cf3d2e5cba79e2f4e0fba8d7903636663ec6d0d
+  sha256: 952021e0e6c55a4a9fe4cd787895b86e239a40e76802a789d6305398d3975897
   patches:
     - 0001-add-packaging.patch
     - 0002-unpin-py313.patch
 
 build:
-  number: 2
+  number: 0
   skip: match(python, "<3.8")
   script:
     # Temp fix:
@@ -40,11 +40,11 @@ requirements:
     - pip
     - python
     - setuptools >=42
-    - dill >=0.3.9
+    - dill >=0.4.1
     - packaging
   run:
     - python
-    - dill >=0.3.9
+    - dill >=0.4.1
 
 tests:
   - python:

@@ -40,11 +40,11 @@ requirements:
     - pip
     - python
     - setuptools >=42
-    - dill >=0.3.9
+    - dill >=0.4.1
     - packaging
   run:
     - python
-    - dill >=0.3.9
+    - dill >=0.4.1
 
 tests:
   - python:
